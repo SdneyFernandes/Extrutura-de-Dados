@@ -1,0 +1,113 @@
+1. Complexidade na Pilha (Stack)
+
+- push(): Adicionar um elemento ao topo da pilha envolve colocar o elemento no final da lista (no caso, `ArrayList`).
+  - Tempo**: **O(1)**, porque estamos apenas adicionando o elemento no final, e isso leva tempo constante.
+  - **Espaço**: **O(1)**, pois o novo elemento ocupa um espaço adicional constante.
+
+- **pop()**: Remover o elemento do topo da pilha envolve remover o último elemento da lista.
+  - **Tempo**: **O(1)**, porque estamos removendo o último elemento diretamente.
+  - **Espaço**: **O(1)**, já que não precisamos de mais memória para essa operação.
+
+- **top()**: Espiar o elemento do topo sem removê-lo envolve apenas acessar o último elemento da lista.
+  - **Tempo**: **O(1)**, porque acessar o último elemento é uma operação direta.
+  - **Espaço**: **O(1)**, já que apenas estamos olhando o elemento.
+
+- **isEmpty()**: Verificar se a pilha está vazia só requer checar se o tamanho da lista é zero.
+  - **Tempo**: **O(1)**, já que a verificação é simples.
+  - **Espaço**: **O(1)**, pois não envolve alocar memória adicional.
+
+- **size()**: Retornar o número de elementos é uma operação que apenas acessa o tamanho da lista.
+  - **Tempo**: **O(1)**.
+  - **Espaço**: **O(1)**.
+
+
+
+ 2. **Complexidade na Fila (Queue)**
+
+- **enqueue()**: Adicionar um elemento ao final da fila envolve inserir o elemento no fim da lista (`ArrayList` ou `LinkedList`).
+  - **Tempo**: **O(1)**, já que estamos adicionando o elemento ao final.
+  - **Espaço**: **O(1)**, já que o novo elemento ocupa um espaço adicional constante.
+
+- **dequeue()**: Remover o elemento da frente da fila envolve remover o primeiro elemento da lista.
+  - **Tempo**: Para um **`ArrayList`**, a complexidade é **O(n)**, porque ao remover o primeiro elemento, todos os outros precisam ser deslocados. Com uma **`LinkedList`**, o tempo seria **O(1)**, pois remover o primeiro nó é imediato.
+  - **Espaço**: **O(1)**, já que apenas removemos um elemento.
+
+- **rear()**: Acessar o último elemento da fila sem removê-lo.
+  - **Tempo**: **O(1)**, porque acessar o último elemento da lista é direto.
+  - **Espaço**: **O(1)**.
+
+- **front()**: Acessar o primeiro elemento da fila sem removê-lo.
+  - **Tempo**: **O(1)**, pois o primeiro elemento é diretamente acessível.
+  - **Espaço**: **O(1)**.
+
+- **isEmpty()**: Verificar se a fila está vazia só requer checar o tamanho da lista.
+  - **Tempo**: **O(1)**.
+  - **Espaço**: **O(1)**.
+
+- **size()**: Retornar o número de elementos da fila.
+  - **Tempo**: **O(1)**.
+  - **Espaço**: **O(1)**.
+
+
+
+### 3. **Complexidade na Lista Encadeada (Linked List)**
+
+- **push()**: Adicionar um nó ao final da lista encadeada.
+  - **Tempo**: **O(n)**, porque precisamos percorrer a lista até o final para adicionar o novo nó.
+  - **Espaço**: **O(1)**, já que o novo nó ocupa um espaço adicional constante.
+
+- **pop()**: Remover o último nó da lista.
+  - **Tempo**: **O(n)**, porque precisamos percorrer a lista até o penúltimo nó para remover o último.
+  - **Espaço**: **O(1)**.
+
+- **insert()**: Inserir um nó em uma posição específica da lista.
+  - **Tempo**: **O(n)**, porque precisamos percorrer a lista até a posição desejada.
+  - **Espaço**: **O(1)**.
+
+- **remove()**: Remover um nó em uma posição específica.
+  - **Tempo**: **O(n)**, pois precisamos percorrer até o nó anterior ao que queremos remover.
+  - **Espaço**: **O(1)**.
+
+- **elementAt()**: Acessar o valor de um nó em uma posição específica.
+  - **Tempo**: **O(n)**, porque precisamos percorrer a lista até o índice desejado.
+  - **Espaço**: **O(1)**.
+
+- **size()**: Retornar o número de elementos na lista.
+  - **Tempo**: **O(1)**, porque mantemos o tamanho da lista atualizado em uma variável.
+  - **Espaço**: **O(1)**.
+
+
+
+### Resumo das Complexidades
+
+#### **Pilha (Stack)**:
+| Operação  | Tempo | Espaço |
+|-----------|-------|--------|
+| push()    | O(1)  | O(1)   |
+| pop()     | O(1)  | O(1)   |
+| top()     | O(1)  | O(1)   |
+| isEmpty() | O(1)  | O(1)   |
+| size()    | O(1)  | O(1)   |
+
+#### **Fila (Queue)**:
+| Operação   | Tempo (ArrayList) | Tempo (LinkedList) | Espaço |
+|------------|-------------------|--------------------|--------|
+| enqueue()  | O(1)              | O(1)               | O(1)   |
+| dequeue()  | O(n)              | O(1)               | O(1)   |
+| rear()     | O(1)              | O(1)               | O(1)   |
+| front()    | O(1)              | O(1)               | O(1)   |
+| isEmpty()  | O(1)              | O(1)               | O(1)   |
+| size()     | O(1)              | O(1)               | O(1)   |
+
+#### **Lista Encadeada (Linked List)**:
+| Operação     | Tempo | Espaço |
+|--------------|-------|--------|
+| push()       | O(n)  | O(1)   |
+| pop()        | O(n)  | O(1)   |
+| insert()     | O(n)  | O(1)   |
+| remove()     | O(n)  | O(1)   |
+| elementAt()  | O(n)  | O(1)   |
+| size()       | O(1)  | O(1)   |
+
+---
+
